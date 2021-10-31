@@ -1,63 +1,86 @@
+const fs = require("fs");
+const path = require("path");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
-function init() {
-    
-    const inquirer = require('inquirer');
-    const fs = require('fs');
-    const generate = require('./generateMarkdown');
-    const path = require('path');
 
-    inquirer
-     .prompt([
+const questions = [
+    {
+        type: "input",
+        message: "Name your project:",
+        name: "title"
+    },
+    {
+        type: "input",
+        message: "Provide a short description of your project:",
+        name: "description"
+    },
+    {
+        type: "input",
+        message: "Provide the steps for installation:",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Provide information about your application usage:",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for testing your application:",
+        name: "tests"
+    },
+    {
+        type: "checkbox",
+        name: "license",
+        message: "Choose a license.",
+        choices: [
+          "GNU AGPLv3",
+          "GNU GPLv3",
+          "GNU LGPLv3",
+          "Mozilla Public License 2.0",
+          "Apache License 2.0",
+          "MIT License",
+          "Boost Software License 1.0",
+          "The Unlicense"
+        ]
+      },
+    {
+        type: "input",
+        message: "Enter your GitHub username:",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "Provide the link to your GitHub profile:",
+        name: "githubLink"
+    },
+    {
+        type: "input",
+        message: "Enter your email address:",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "List all authors:",
+        name: "contributors"
+    },
 
-        {
-            type: 'input',
-            name: 'Title',
-            message: 'What is the name of your project?'
-        },
-        {
-            type: 'input',
-            name: 'github',
-            message: 'What is your github name?'
-        },
-        {
-            type: 'input',
-            name: 'Description',
-            message: 'please enter a description of your project',
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'Provide instructions on how to install this application',
-        },
-        {
-            type: 'input',
-            name: 'Usage',
-            message: 'How do you Use your application?',
-        },
-        {
-            type: 'input',
-            name: 'Credits',
-            message: 'Is there any collaborators for this project?',
-        },
-        {
-            type: 'checkbox',
-            name: 'License',
-            message: 'What license was used for this README?',
-            choices: ["MIT", "GNU Lesser General Public License v3.0", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0", "The Unlicense"]
-        },
-        {
-            type: 'input',
-            name: 'Test',
-            message: 'What command do you use to test this App?',
-        },
-    ]).then((response) => {
 
-        return fs.writeFileSync(path.join (process.cwd(), "README.md"), generate(response));
-    });
+];
 
-}
-init();
+async function init() {
+    try {
+      const data = await inquirer.prompt(questions)
+       fs.writeFileSync("README.md", generateMarkdown(data));
+      console.log("ReadMe is Compeleted README.md");
 
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  init();
 
 
 
