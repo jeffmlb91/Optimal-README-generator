@@ -15,7 +15,7 @@ function licenseBadge(data) {
   if (licenseType === "GNU General Public License 3.0") {
       licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
     };
-  return licenseString
+  return licenseString;
 };
 
 //Create a function to generate markdown for README
@@ -31,8 +31,11 @@ function generateMarkdown(data) {
     6. [License](#License)
     7. [GitHub](#GitHub)
     8. [E-mail](#E-mail)
+  
+  ## GitHub
+  ${data.description}
   ## Description
-  ${data.description} 
+  ${data.github} 
   ## Installation
   ${data.installation}
   ## Usage
@@ -43,69 +46,6 @@ function generateMarkdown(data) {
   ${data.tests}
   ## License
   ${licenseBadge(data)}
-  ## GitHub
-  ${data.github}
-  ## E-mail
-  ${data.email}`
 }
-  module.exports = generateMarkdown;
 
-
-
-
-
-
-
-
-
-
-
-/*// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-
-  return `
-  # ${data.Title}
-    [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/${data.UserName}/${data.Title})
-    # Description
-    ${data.Description}
-    # Table of Contents 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    # Installation
-    The following necessary dependencies must be installed to run the application properly: ${data.Installation}
-    # Usage
-    ​This application is used for ${data.Usage}
-    # License
-    This project is license under the ${data.License} license.
-    # Contributing
-    ​Contributors: ${data.Contributor}
-    # Tests
-    To run tests, you need to run the following command: ${data.Test}
-    # Questions
-    If you have any questions about the repo, open an issue or contact ${data.UserName} directly ${data.Email}.
-  
-  
-  `
-}
- 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
-*/
 module.exports = generateMarkdown;

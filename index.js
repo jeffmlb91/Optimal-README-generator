@@ -16,18 +16,23 @@ function init() {
         },
         {
             type: 'input',
+            name: 'github',
+            message: 'What is your github name?'
+        },
+        {
+            type: 'input',
             name: 'Description',
             message: 'please enter a description of your project',
         },
         {
             type: 'input',
-            name: 'Installation',
-            message: 'What are the steps required to install your project?',
+            name: 'installation',
+            message: 'Provide instructions on how to install this application',
         },
         {
             type: 'input',
             name: 'Usage',
-            message: 'Provide instructions and examples for use of this application',
+            message: 'How do you Use your application?',
         },
         {
             type: 'input',
