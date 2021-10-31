@@ -13,11 +13,11 @@ This is an automated README.md generator that uses the Inquirer NPM, File System
 ## Installation
 In order to use the Professional README generator, an installation of Node.js will be required. User will aslo be required to use a CLI such as visual studio code as well the installation of inquirer npm
 ## Usage
-In order to use this professional README generator, run " node index.js" in the terminal and prompts will be presented to the user. Upon answering all the questions a new README.md will be created in the current working directory.
+n order to use this professional README generator, run " node index.js" in the terminal and prompts will be presented to the user. Upon answering all the questions a new README.md will be created in the current working directory.
 ## License
 MIT License
 ## Contributions
-Geoffrey Moluba
+Geoffrey Moluba, Instructor Ali, TA's and ASK BCS
 ## Test
 in order to test this aplication, please run node index.js
 ## Github
