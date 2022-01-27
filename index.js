@@ -68,20 +68,30 @@ const questions = [
 
 
 ];
+function writeToFile(fileName, response) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), response);
+}
 
-async function init() {
-    try {
-      const data = await inquirer.prompt(questions)
-       fs.writeFileSync("README.md", generateMarkdown(data));
-      console.log("ReadMe is Compeleted README.md");
+function init() {
+    inquirer.prompt(questions)
+    .then((inquirerResponses) => {
+        console.log("Generating README");
+        writeToFile("README.md", generateMarkdown({...inquirerResponses}));
+    })
+}
+init();
+// async function init() {
+//     try {
+//       const data = await inquirer.prompt(questions)
+//        fs.writeToFile("README.md", generateMarkdown(data));
+//       console.log("ReadMe is Completed README.md");
 
-    } catch (error) {
-      console.error(error);
-    }
-  }
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
 
-  init();
-
+//   init();
 
 
 
