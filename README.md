@@ -3,7 +3,7 @@
 
   ## Description
 
-  We mostly tend to ignore the README file as a trivial non-essential part of your project. However, a good README file is what an Index is to a Book. README file enables users to navigate and identify essential elements of your project quickly.
+  We mostly tend to ignore the README file as a trivial non-essential part of your project. However, a good README file is what an Index is to a Book. README file enables users to navigate and identify essential elements of your project quickly. 
 
   ## Table of Contents
 
@@ -21,10 +21,10 @@
   This project will allow developers to quickly generate a `README.Md` file in a pretty handy way.
 
   ## Tests
-  There aren't test at this time
+  There are no tests required at this time
 
   ## Contributors
-  Geoffrey & Univerity of Toronto
+  Geoffrey & University of Toronto
 
   ## License
   MIT License
