@@ -63,7 +63,7 @@ const questions = [
     {
         type: "input",
         message: "List all authors:",
-        name: "contributors"
+        name: "authors"
     },
 
 
