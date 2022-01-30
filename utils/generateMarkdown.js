@@ -10,7 +10,7 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  * Installation](#installation)
+  * [Installation](#installation)
   * [Tests](#tests)
   * [Usage](#usage)
   * [License](#license)
@@ -66,7 +66,7 @@ function renderLicenseBadge(license) {
     case "The Unilicense":
       return `[The Unilicese](https://choosealicense.com/licenses/unlicense/)`;
   }
-}
+};
 // function generateMarkdown(data) {
 //   return `## Title
 // https://github.com/${data.UserName}/${data.title}
