@@ -1,7 +1,7 @@
 ## Title
-https://github.com/undefined/READ ME GENERATOR
+https://github.com/undefined/README GENERATOR
 # Description
-This project allows a user to generate a README.md file
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 ## Table of Contents
 * [Description](#Description-section)
 * [Installation](#Installation-section)
@@ -11,18 +11,18 @@ This project allows a user to generate a README.md file
 * [Test](#Test-section)
 * [Questions](#Questions-section)
 # Installation
-The following necessary dependencies must be installed to run the application properly: Users will need to run npm install inquirer and path
+The following necessary dependencies must be installed to run the application properly: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
 # Usage
-In order to use this app, This README generator will be really helpful when generating a README. User should use it at their convenience.
+In order to use this app, sunt in culpa qui officia deserunt mollit anim id est laborum.
 # License
-This project is licensed under the MIT License license.
+This project is licensed under the  license.
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 # Contributions
 ​Contributors: Geoffrey MLB
 # Test
-The following is needed to run the test: None at this time.
+The following is needed to run the test: 
 # Github
-Jeffmlb91  
+jeffmlb91  
     
 # Github Link
 https://github.com/jeffmlb91

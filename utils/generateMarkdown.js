@@ -1,76 +1,56 @@
 // function to generate markdown for README
 
-function generateMarkdown(response) {
+function generateMarkdown(data) {
   return `
-  #${response.title} ${renderLicenseBadge(response.license)}
+  #${data.title} ${renderLicenseBadge(data.license)}
 
-  ## description
+  ## Description
 
-  ${response.description}
+  ${data.description}
 
   ## Table of Contents
 
-  * [Installation](#Installation)
-  * [Tests](#Tests)
-  * [Usage](#Usage)
-  * [License](License)
-  * [Contributing](#Contributing)
-  * [Questions](#Questions)
+  * [Installation](#installation)
+  * [Tests](#tests)
+  * [Usage](#usage)
+  * [License](license)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
   
   ## Installation 
-  ${response.installation}
+  ${data.installation}
 
   ## usage
-  ${response.usage}
+  ${data.usage}
 
   ## Tests
-  ${response.tests}
+  ${data.tests}
 
   ## Contributing
-  ${response.contributing}
+  ${data.contributing}
 
   ## License
-  ${response.license}
+  ${data.license}
     # Github
-  ${response.github}  
+  ${data.github}  
       
   # Github Link
-  ${response.githubLink}
+  ${data.githubLink}
 
   ## Questions
   If you have any question about this application or the functionality.
-  Please contact me at my email ${response.email} or my GitHub page ${response.githubLink}.
+  Please contact me at my email ${data.email} or my GitHub page ${
+    data.githubLink
+  }.
   Thank you for using my application.
-  `
+  `;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function generateMarkdown(response) {
+function generateMarkdown(data) {
   return `## Title
-https://github.com/${response.UserName}/${response.title}
+https://github.com/${data.UserName}/${data.title}
 # Description
-${response.description}
+${data.description}
 ## Table of Contents
 * [Description](#Description-section)
 * [Installation](#Installation-section)
@@ -80,24 +60,24 @@ ${response.description}
 * [Test](#Test-section)
 * [Questions](#Questions-section)
 # Installation
-The following necessary dependencies must be installed to run the application properly: ${response.installation}
+The following necessary dependencies must be installed to run the application properly: ${data.installation}
 # Usage
-In order to use this app, ${response.usage}
+In order to use this app, ${data.usage}
 # License
-This project is licensed under the ${response.license} license.
+This project is licensed under the ${data.license} license.
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 # Contributions
-​Contributors: ${response.contributors}
+​Contributors: ${data.contributors}
 # Test
-The following is needed to run the test: ${response.tests}
+The following is needed to run the test: ${data.tests}
 # Github
-${response.github}  
+${data.github}  
     
 # Github Link
-${response.githubLink}
+${data.githubLink}
 # Questions
  If you have any question about this application or the functionality.
- Please contact me at my email ${response.email} or my GitHub page ${response.githubLink}.
+ Please contact me at my email ${data.email} or my GitHub page ${data.githubLink}.
  Thank you for using my application.
 `;
 }

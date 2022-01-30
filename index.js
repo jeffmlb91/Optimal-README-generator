@@ -68,8 +68,8 @@ const questions = [
 
 
 ];
-function writeToFile(fileName, response) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), response);
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
 function init() {
